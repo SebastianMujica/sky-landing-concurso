@@ -3,22 +3,18 @@ import bg from "@/images/backgrounds/main-slider-3-bg.jpg";
 export const mainSlider = [
   {
     id: 1,
-    bg: "main-slider-1-1.jpg",
-    title: "Award \n winning \n consulting",
+    bg: "banner_1.jpg",
+    title: "Sky lubricantes te lleva a conocer",
+    subtitle: "Los Roques, Canaima y Mérida",
     href: "/about",
   },
   {
     id: 2,
-    bg: "main-slider-1-2.jpg",
-    title: "Award \n winning \n consulting",
+    bg: "banner_2.jpg",
+    title: "Sky luibricantes te lleva a ",
+    subtitle: "Los Roques, Canaima y Mérida",
     href: "/about",
-  },
-  {
-    id: 3,
-    bg: "main-slider-1-3.jpg",
-    title: "Award \n winning \n consulting",
-    href: "/about",
-  },
+  }
 ];
 
 export const mainSliderTwo = [
@@ -31,12 +27,6 @@ export const mainSliderTwo = [
   {
     id: 2,
     bg: "main-slider-2-2.jpg",
-    title: "Provides quality \n consultancy",
-    href: "/about",
-  },
-  {
-    id: 3,
-    bg: "main-slider-2-3.jpg",
     title: "Provides quality \n consultancy",
     href: "/about",
   },

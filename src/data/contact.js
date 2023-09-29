@@ -4,25 +4,31 @@ export const inputs = [
   {
     name: "name",
     type: "text",
-    placeholder: "Full name",
+    placeholder: "Tu nombre",
     required: true,
   },
   {
     name: "email",
     type: "email",
-    placeholder: "Email address",
+    placeholder: "Tu Email",
     required: true,
   },
   {
     name: "phone",
     type: "text",
-    placeholder: "Phone",
+    placeholder: "Tu teléfono",
     required: false,
   },
   {
-    name: "subject",
+    name: "cedula",
     type: "text",
-    placeholder: "Subject",
+    placeholder: "Tu cédula",
+    required: false,
+  },
+  {
+    name: "codigo",
+    type: "text",
+    placeholder: "Tu codigo",
     required: false,
   },
 ];
@@ -70,9 +76,9 @@ export const contactOne = {
 };
 
 export const contactPage = {
-  tagline: "Contact with us",
+  tagline: "Viaja con Sky",
   title: "Have Any Question?",
-  title2: "Write a Message",
+  title2: "Registra tu cupon",
   inputs,
 };
 

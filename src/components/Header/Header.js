@@ -47,7 +47,6 @@ const Header = ({ mainMenuClass = "", navItems = items, onePage = false }) => {
               <a onClick={handleToggleMenu} className="mobile-nav__toggler">
                 <i className="fa fa-bars"></i>
               </a>
-              <MenuList navItems={navItems} onePage={onePage} />
             </div>
           </div>
           <div className="main-menu-wrapper__right">

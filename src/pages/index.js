@@ -14,22 +14,15 @@ import WelcomeOne from "@/components/WelcomeSection/WelcomeOne";
 import WorkTogether from "@/components/WorkTogether/WorkTogether";
 import { mainSlider } from "@/data/mainSlider";
 import React from "react";
+import ContactDetails from "@/components/Contact/ContactDetails";
+import ContactPage from "@/components/Contact/ContactPage";
 
 const Home = () => {
   return (
     <Layout pageTitle="Home One">
       <Header />
-      <MainSlider sliders={mainSlider} showShape />
-      <WelcomeOne />
-      <WorkTogether />
-      <CaseOne />
-      <BenefitsOne />
-      <FreeConsultation />
-      <OurMission />
-      <TeamOne />
-      <TestimonialOne />
-      <TrustedOne />
-      <NewsOne showShape />
+      <MainSlider sliders={mainSlider}  />
+      <ContactPage isTitleTwo />
       <CtaOne />
     </Layout>
   );

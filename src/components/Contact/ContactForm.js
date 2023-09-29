@@ -9,7 +9,7 @@ const ContactForm = ({
   messageClassName = "text-message-box",
   btnBoxClassName = "btn-box",
   btnClassName = "comment-form__btn",
-  btnText = "Send a message",
+  btnText = "Enviar codigo",
 }) => {
   const {
     register,
@@ -46,13 +46,6 @@ const ContactForm = ({
       </Row>
       <Row>
         <Col xl={12}>
-          <div className={`${inputClassName} ${messageClassName}`}>
-            <textarea
-              name="message"
-              placeholder="Write a Message"
-              {...register("message")}
-            ></textarea>
-          </div>
           <div className={btnBoxClassName}>
             <button type="submit" className={`thm-btn ${btnClassName}`}>
               {btnText}
