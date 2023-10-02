@@ -1,10 +1,10 @@
-import logo from "@/images/resources/logo-1.png";
+import logo from "@/images/resources/logosky.png";
 import bg from "@/images/shapes/site-footer-shape-1.png";
 
 const footerData = {
   bg,
   logo,
-  aboutText: "Great Experience for Building Customers & Businesses",
+  aboutText: "Ciencia al servicio de la lubricación",
   socials: [
     {
       id: 1,
@@ -75,11 +75,11 @@ const footerData = {
     },
   ],
   newsletterText: "Subsrcibe for our upcoming latest articles and resources",
-  address: "60 road, broklyn golden street new york. USA",
-  phone: "+1- ( 246 ) 333 - 0079",
+  address: "Zona industrial III, carrera 2 esquina calle 4. Barquisimeto, estado Lara.",
+  phone: "(0251) 269 1364 - (0251) 269 1028",
   phoneHref: "12463330079",
-  email: "needhelp@company.com",
-  author: "Oslim",
+  email: "info@skylubricantes.com",
+  author: "skylubricantes",
   year: new Date().getFullYear(),
 };
 

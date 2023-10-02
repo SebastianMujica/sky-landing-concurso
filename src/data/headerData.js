@@ -1,4 +1,5 @@
-import logo from "@/images/resources/logo-1.png";
+import logo from "@/images/resources/logosky.png";
+import logopromo from "@/images/resources/logo-promoRojo.png";
 
 const home = {
   id: 1,
@@ -233,6 +234,7 @@ const socials = [
 
 const headerData = {
   logo,
+  logopromo,
   navItems,
   callText: "Need help? Talk to an expert",
   phone: "+1- ( 246 ) 333 - 0079",

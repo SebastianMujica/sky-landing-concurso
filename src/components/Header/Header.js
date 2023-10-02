@@ -40,10 +40,10 @@ const Header = ({ mainMenuClass = "", navItems = items, onePage = false }) => {
           <div className="main-menu-wrapper__left">
             <div className="main-menu-wrapper__logo">
               <Link href="/">
-                <Image src={logo.src} alt="" />
+                <Image src={logo.src} alt="" style={{ width:'150px'}} />
               </Link>
             </div>
-            <div className="main-menu-wrapper__main-menu">
+            <div className="main-menu-wrapper__main-menu" style={{boder:'none'}}>
               <a onClick={handleToggleMenu} className="mobile-nav__toggler">
                 <i className="fa fa-bars"></i>
               </a>
@@ -60,12 +60,6 @@ const Header = ({ mainMenuClass = "", navItems = items, onePage = false }) => {
                   <a href={`tel:${phoneHref}`}>{phone}</a>
                 </h5>
               </div>
-            </div>
-            <div className="main-menu-wrapper__search-cat">
-              <a
-                onClick={handleToggleSearch}
-                className="main-menu-wrapper__search search-toggler icon-magnifying-glass cursor-pointer"
-              ></a>
             </div>
           </div>
         </div>

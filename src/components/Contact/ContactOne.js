@@ -3,7 +3,7 @@ import useActive from "@/hooks/useActive";
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Title from "../Reuseable/Title";
-import ContactForm from "./ContactForm";
+import ContactForm from "./ClienteForm";
 
 const { bg, tagline, title, text, timeRange, inputs, bottomTitle, contacts } =
   contactOne;

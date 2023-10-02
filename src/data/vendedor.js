@@ -1,39 +1,6 @@
 import bg from "@/images/shapes/contact-one-shape.png";
 
-export const inputsCliente = [
-  {
-    name: "name",
-    type: "text",
-    placeholder: "Tu nombre",
-    required: true,
-  },
-  {
-    name: "email",
-    type: "email",
-    placeholder: "Tu Email",
-    required: true,
-  },
-  {
-    name: "phone",
-    type: "text",
-    placeholder: "Tu teléfono",
-    required: false,
-  },
-  {
-    name: "cedula",
-    type: "text",
-    placeholder: "Tu cédula",
-    required: false,
-  },
-  {
-    name: "codigo",
-    type: "text",
-    placeholder: "Tu codigo",
-    required: false,
-  },
-];
-
-export const inputsVendedor = [
+export const inputs = [
   {
     name: "name",
     type: "text",
@@ -90,8 +57,7 @@ export const contactOne = {
   title: "We are Here to Help You & Your Business",
   text: "Pellentesque ultricies quam dui, id portt tor leo \n iaculis nec. Phasellus ac neque.",
   timeRange: "8:00 am - 6:00 pm",
-  inputsCliente,
-  inputsVendedor,
+  inputs,
   bottomTitle: "Visit Our Office",
   contacts: [
     {
@@ -125,8 +91,7 @@ export const contactPage = {
   tagline: "Viaja con Sky",
   title: "Have Any Question?",
   title2: "Registra tu cupon",
-  inputsCliente,
-  inputsVendedor,
+  inputs,
 };
 
 export const contactDetails = {

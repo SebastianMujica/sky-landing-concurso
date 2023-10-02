@@ -1,6 +1,6 @@
 import React from "react";
 import { Image } from "react-bootstrap";
-import ContactForm from "../Contact/ContactForm";
+import ContactForm from "../Contact/ClienteForm";
 import Link from "../Reuseable/Link";
 import TextSplit from "../Reuseable/TextSplit";
 import CommentOne from "./CommentOne";

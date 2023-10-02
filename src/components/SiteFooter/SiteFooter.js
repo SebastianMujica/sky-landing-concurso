@@ -38,7 +38,7 @@ const SiteFooter = ({ footerClassName = "" }) => {
               <div className="footer-widget__column footer-widget__about">
                 <div className="footer-widget__logo">
                   <Link href="/">
-                    <Image src={logo.src} alt="" />
+                    <Image src={logo.src} alt="" style={{ width:"150px"}}/>
                   </Link>
                 </div>
                 <div className="footer-widget__about-text-box">
@@ -54,54 +54,14 @@ const SiteFooter = ({ footerClassName = "" }) => {
               </div>
             </Col>
             <Col xl={3} lg={6} md={6} className="animated fadeInUp">
-              <div className="footer-widget__column footer-widget__explore clearfix">
-                <h3 className="footer-widget__title">Explore</h3>
-                <ul className="footer-widget__explore-list list-unstyled clearfix">
-                  {links.slice(0, 5).map(({ id, href, text }) => (
-                    <li key={id}>
-                      <Link href={href}>{text}</Link>
-                    </li>
-                  ))}
-                </ul>
-                <ul className="footer-widget__explore-list footer-widget__explore-list-two list-unstyled clearfix">
-                  {links.slice(5).map(({ id, href, text }) => (
-                    <li key={id}>
-                      <Link href={href}>{text}</Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+
             </Col>
             <Col xl={3} lg={6} md={6} className="animated fadeInUp">
-              <div className="footer-widget__column footer-widget__newsletter-box clearfix">
-                <h3 className="footer-widget__title">Newsletter</h3>
-                <p className="footer-widget__newsletter-text">
-                  {newsletterText}
-                </p>
-                <form
-                  onSubmit={handleSubmit}
-                  className="footer-widget__newsletter-form"
-                >
-                  <div className="footer-widget__newsletter-input-box">
-                    <input
-                      type="email"
-                      placeholder="Email address"
-                      name="email"
-                      required
-                    />
-                    <button
-                      type="submit"
-                      className="footer-widget__newsletter-btn"
-                    >
-                      <i className="far fa-paper-plane"></i>
-                    </button>
-                  </div>
-                </form>
-              </div>
+             
             </Col>
             <Col xl={3} lg={6} md={6} className="animated fadeInUp">
               <div className="footer-widget__column footer-widget__contact clearfix">
-                <h3 className="footer-widget__title">Contact</h3>
+                <h3 className="footer-widget__title">Contacto</h3>
                 <p className="footer-widget__contact-text">{address}</p>
                 <h4 className="footer-widget__contact-info">
                   <a

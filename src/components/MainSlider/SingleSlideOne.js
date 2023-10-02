@@ -32,12 +32,9 @@ const SingleSlideOne = ({ slider = {}, showShape = false }) => {
               <h2>
                 { title }
               </h2>
-              <h3>
+              <h3 style={{color: "red", fontSize: "3.75rem"}}>
                 { subtitle }
               </h3>
-              <Link href={href} className="thm-btn">
-                Entérate Cómo
-              </Link>
             </div>
           </Col>
         </Row>
