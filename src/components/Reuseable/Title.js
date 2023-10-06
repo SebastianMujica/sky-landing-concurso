@@ -7,8 +7,9 @@ import React from "react";
 const Title = ({ title = "", tagline = "", children, className, ...props }) => {
   return (
     <div className={`section-title ${className}`} {...props}>
-      {tagline && <span className="section-title__tagline">{tagline}</span>}
+      
       <h2 className="section-title__title">{title || children}</h2>
+      {tagline && <span className="section-title__tagline" style={{fontSize:"16px"}}>{tagline}</span>}
     </div>
   );
 };

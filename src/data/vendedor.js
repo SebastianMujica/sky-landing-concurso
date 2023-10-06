@@ -38,7 +38,7 @@ export const inputs = [
     required: true,
   },
   {
-    name: "city",
+    name: city,
     type: "text",
     placeholder: "Tu ciudad",
     required: true,

@@ -7,9 +7,7 @@ const useScroll = (scrollSize = 0) => {
   const handleSet = useCallback(() => {
     setScroll(window?.scrollY);
     if (window?.scrollY > scrollSize) {
-      setScrollTop(true);
     } else {
-      setScrollTop(false);
     }
   }, [scrollSize]);
 

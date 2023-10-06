@@ -7815,6 +7815,21 @@ input[type="search"]::-webkit-search-results-decoration {
   font-weight: 500;
 }
 
+.form-select {
+  font-size: 16px;
+  color: var(--oslim-gray);
+  height: 70px;
+  width: 100%;
+  background-color: var(--oslim-extra);
+  padding: 18px 30px 30px;
+  border: none;
+  border-radius: 0px;
+  outline: none;
+  margin-bottom: 0px;
+  border-radius: var(--oslim-bdr-radius);
+  font-weight: 500;
+}
+
 .comment-form__input-box.text-message-box {
   height: 150px;
 }

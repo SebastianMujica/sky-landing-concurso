@@ -16,12 +16,15 @@ import { mainSlider } from "@/data/mainSlider";
 import React from "react";
 import ContactDetails from "@/components/Contact/ContactDetails";
 import ContactPage from "@/components/Contact/ContactPage";
+import { Col, Container, Row } from "react-bootstrap";
+
 
 const Home = () => {
   return (
-    <Layout pageTitle="Home One">
+    <Layout pageTitle="Viaja con Sky">
       <Header />
       <MainSlider sliders={mainSlider}  />
+      <WelcomeOne />
       <ContactPage isTitleTwo />
       <CtaOne />
     </Layout>

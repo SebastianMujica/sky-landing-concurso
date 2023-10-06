@@ -236,10 +236,10 @@ const headerData = {
   logo,
   logopromo,
   navItems,
-  callText: "Need help? Talk to an expert",
-  phone: "+1- ( 246 ) 333 - 0079",
-  phoneHref: "12463330079",
-  email: "needhelp@oslim.com",
+  callText: "¿Tienes dudas?",
+  phone: "(0251) 269 1364 - (0251) 269 1028",
+  phoneHref: "+582512691364",
+  email: "info@skylubricantes.com",
   socials,
 };
 

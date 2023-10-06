@@ -30,10 +30,10 @@ const SingleSlideOne = ({ slider = {}, showShape = false }) => {
           <Col xl={showShape ? 7 : 12}>
             <div className="main-slider__content">
               <h2>
-                { title }
+                {  }
               </h2>
               <h3 style={{color: "red", fontSize: "3.75rem"}}>
-                { subtitle }
+                {  }
               </h3>
             </div>
           </Col>

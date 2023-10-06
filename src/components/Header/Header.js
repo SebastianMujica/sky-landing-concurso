@@ -38,15 +38,10 @@ const Header = ({ mainMenuClass = "", navItems = items, onePage = false }) => {
           }`}
         >
           <div className="main-menu-wrapper__left">
-            <div className="main-menu-wrapper__logo">
+            <div className="main-menu-wrapper__logo" style={{ width:'100%',textAlign:"center"}}>
               <Link href="/">
                 <Image src={logo.src} alt="" style={{ width:'150px'}} />
               </Link>
-            </div>
-            <div className="main-menu-wrapper__main-menu" style={{boder:'none'}}>
-              <a onClick={handleToggleMenu} className="mobile-nav__toggler">
-                <i className="fa fa-bars"></i>
-              </a>
             </div>
           </div>
           <div className="main-menu-wrapper__right">

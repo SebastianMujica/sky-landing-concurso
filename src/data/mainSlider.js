@@ -11,7 +11,7 @@ export const mainSlider = [
   {
     id: 2,
     bg: "banner_2.jpg",
-    title: "Sky luibricantes te lleva a ",
+    title: "Sky lubricantes te lleva a ",
     subtitle: "Los Roques, Canaima y Mérida",
     href: "/about",
   }
@@ -47,38 +47,5 @@ const socials = [
     id: 3,
     title: "Instagram",
     href: "#",
-  },
-];
-
-export const mainSliderThree = [
-  {
-    id: 1,
-    bg,
-    images: ["main-slider-3-img-1.png", "main-slider-3-img-4.png"],
-    shapes: ["main-slider-three-shape-1.png", "main-slider-three-shape-2.png"],
-    socials,
-    dateRange: "Mon - Fri",
-    timeRange: "9am - 7pm",
-    title: "finance & \n consulting \n business",
-  },
-  {
-    id: 2,
-    bg,
-    images: ["main-slider-3-img-1.png", "main-slider-3-img-4.png"],
-    shapes: ["main-slider-three-shape-1.png", "main-slider-three-shape-2.png"],
-    socials,
-    dateRange: "Mon - Fri",
-    timeRange: "9am - 7pm",
-    title: "finance & \n consulting \n business",
-  },
-  {
-    id: 3,
-    bg,
-    images: ["main-slider-3-img-1.png", "main-slider-3-img-4.png"],
-    shapes: ["main-slider-three-shape-1.png", "main-slider-three-shape-2.png"],
-    socials,
-    dateRange: "Mon - Fri",
-    timeRange: "9am - 7pm",
-    title: "finance & \n consulting \n business",
   },
 ];

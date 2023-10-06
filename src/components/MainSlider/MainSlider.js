@@ -27,6 +27,7 @@ const options = {
   autoplay: {
     delay: 5000,
   },
+  autoHeight: true
 };
 
 const MainSlider = ({
@@ -39,7 +40,7 @@ const MainSlider = ({
   const ref = useActive(id);
 
   return (
-    <section ref={ref} className={`main-slider ${className}`} id={id}>
+    <section className={`main-slider ${className}`} id={id}>
       <Swiper {...options}>
         <div className="swiper-wrapper">
           {sliders.map((slider) => (
@@ -47,21 +48,6 @@ const MainSlider = ({
               <SingleSlideOne slider={slider} showShape={showShape} />
             </SwiperSlide>
           ))}
-        </div>
-        <div className="swiper-pagination" id="main-slider-pagination"></div>
-        <div className={navClassName}>
-          <div
-            className="swiper-button-prev"
-            id="main-slider__swiper-button-prev"
-          >
-            <i className="icon-right-arrow icon-left-arrow"></i>
-          </div>
-          <div
-            className="swiper-button-next"
-            id="main-slider__swiper-button-next"
-          >
-            <i className="icon-right-arrow"></i>
-          </div>
         </div>
       </Swiper>
     </section>
