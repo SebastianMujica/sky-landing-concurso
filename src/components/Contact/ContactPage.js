@@ -36,12 +36,24 @@ const ContactPage = ({ isTitleTwo = false }) => {
           <Col xl={12}>
             <h2>¿Eres Vendedor?</h2>
             <FormCheck
-                    type="switch"
-                    id="custom-switch"
-                    label="Vendedor"                   
+                    reverse
+                    type="radio"
+                    id="custom-switch-si"
+                    name="group1"
+                    label="Si"                   
                     onChange={ () => {
                       setCliente(!cliente);
-                      saveCupon();
+                    }}
+                    style={{ marginBottom:"25px", marginTop: "25px"}}
+            />
+            <FormCheck
+                    reverse
+                    type="radio"
+                    id="custom-switch-no"
+                    name="group1"
+                    label="No"                   
+                    onChange={ () => {
+                      setCliente(!cliente);
                     }}
                     style={{ marginBottom:"25px", marginTop: "25px"}}
             />
