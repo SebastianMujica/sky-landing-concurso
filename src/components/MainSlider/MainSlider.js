@@ -5,6 +5,7 @@ import SwiperCore, {
   EffectFade,
   Navigation,
   Pagination,
+  EffectCube
 } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SingleSlideOne from "./SingleSlideOne";
