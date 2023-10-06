@@ -14,6 +14,13 @@ export const mainSlider = [
     title: "Sky lubricantes te lleva a ",
     subtitle: "Los Roques, Canaima y Mérida",
     href: "/about",
+  },
+  {
+    id: 3,
+    bg: "banner_3.jpg",
+    title: "Sky lubricantes te lleva a ",
+    subtitle: "Los Roques, Canaima y Mérida",
+    href: "/about",
   }
 ];
 

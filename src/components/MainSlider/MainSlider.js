@@ -27,7 +27,6 @@ const options = {
   autoplay: {
     delay: 5000,
   },
-  autoHeight: true
 };
 
 const MainSlider = ({

@@ -1698,7 +1698,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .main-slider .swiper-slide-active .image-layer {
-  opacity: 0.4;
+  opacity: 0.9;
 }
 
 .main-slider-shape-1 {
