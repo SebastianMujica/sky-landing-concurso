@@ -40,6 +40,7 @@ const ClienteForm = ({
       if (vendedor !== null){
         if (vendedor){
           const response = await fetch("https://apiviajacon.skylubricantes.com/api/talonario/register", {
+            mode: 'no-cors',
             method: "POST",
             body: JSON.stringify(data),
             headers: {
@@ -61,6 +62,7 @@ const ClienteForm = ({
             }
           }else{
           const response = await fetch("https://apiviajacon.skylubricantes.com/api/cupones/create", {
+            mode: 'no-cors',
             method: "POST",
             body: JSON.stringify(data),
             headers: {
