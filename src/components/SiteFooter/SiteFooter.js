@@ -54,12 +54,6 @@ const SiteFooter = ({ footerClassName = "" }) => {
               </div>
             </Col>
             <Col xl={3} lg={6} md={6} className="animated fadeInUp">
-
-            </Col>
-            <Col xl={3} lg={6} md={6} className="animated fadeInUp">
-             
-            </Col>
-            <Col xl={3} lg={6} md={6} className="animated fadeInUp">
               <div className="footer-widget__column footer-widget__contact clearfix">
                 <h3 className="footer-widget__title">Contacto</h3>
                 <p className="footer-widget__contact-text">{address}</p>

@@ -15,19 +15,8 @@ const { tagline, title, inputsVendedor, inputsCliente, title2, ciudades, } = con
 
 const ContactPage = ({ isTitleTwo = false }) => {
   const newTitle = isTitleTwo ? title2 : title;
-  const [cliente, setCliente] = useState(false)
-
- 
-  const saveCupon = async () => {
-    const response = await fetch("http://apiviajacon.skylubricantes.com/api/cupones/create", {
-        method: "POST",
-        body: JSON.stringify(cliente),
-        headers: {
-            "Content-Type": "application/json",
-        },
-    });
-    console.log(response)
-};
+  const [cliente, setCliente] = useState(null)
+  
   return (
     <section className="contact-page">
       <Container>
@@ -42,7 +31,7 @@ const ContactPage = ({ isTitleTwo = false }) => {
                     name="group1"
                     label="Si"                   
                     onChange={ () => {
-                      setCliente(!cliente);
+                      setCliente(true);
                     }}
                     style={{ marginBottom:"25px", marginTop: "25px"}}
             />
@@ -53,7 +42,7 @@ const ContactPage = ({ isTitleTwo = false }) => {
                     name="group1"
                     label="No"                   
                     onChange={ () => {
-                      setCliente(!cliente);
+                      setCliente(false);
                     }}
                     style={{ marginBottom:"25px", marginTop: "25px"}}
             />
@@ -61,10 +50,10 @@ const ContactPage = ({ isTitleTwo = false }) => {
 
             <div className="contact-page__form">
               { !cliente &&
-                <ClienteForm inputs={inputsCliente} dataCiudades = { ciudades }/>
+                <ClienteForm inputs={inputsCliente} dataCiudades = { ciudades } vendedor = { cliente } />
               }
               { cliente &&
-                <ClienteForm inputs={inputsVendedor} dataCiudades = { ciudades }/>
+                <ClienteForm inputs={inputsVendedor} dataCiudades = { ciudades } vendedor = { cliente }/>
               }
             </div>
           </Col>

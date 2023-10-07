@@ -7,24 +7,9 @@ const footerData = {
   aboutText: "Ciencia al servicio de la lubricación",
   socials: [
     {
-      id: 1,
-      icon: "fab fa-twitter",
-      href: "#",
-    },
-    {
-      id: 2,
-      icon: "fab fa-facebook",
-      href: "#",
-    },
-    {
-      id: 3,
-      icon: "fab fa-pinterest-p",
-      href: "#",
-    },
-    {
       id: 4,
       icon: "fab fa-instagram",
-      href: "#",
+      href: "https://www.instagram.com/skylubricantes.ve/?hl=es-la",
     },
   ],
   links: [
@@ -79,7 +64,7 @@ const footerData = {
   phone: "(0251) 269 1364 - (0251) 269 1028",
   phoneHref: "12463330079",
   email: "info@skylubricantes.com",
-  author: "skylubricantes",
+  author: "Sky Lubricantes C.A",
   year: new Date().getFullYear(),
 };
 

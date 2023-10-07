@@ -2,9 +2,15 @@ import bg from "@/images/shapes/contact-one-shape.png";
 
 export const inputsCliente = [
   {
-    name: "name",
+    name: "nombre",
     type: "text",
     placeholder: "Tu nombre",
+    required: true,
+  },
+  {
+    name: "apellido",
+    type: "text",
+    placeholder: "Tu apellido",
     required: true,
   },
   {
@@ -14,7 +20,7 @@ export const inputsCliente = [
     required: true,
   },
   {
-    name: "phone",
+    name: "telefono",
     type: "text",
     placeholder: "teléfono",
     required: true,
@@ -26,7 +32,7 @@ export const inputsCliente = [
     required: true,
   },
   {
-    name: "codigo",
+    name: "code",
     type: "text",
     placeholder: "codigo",
     required: true,
@@ -35,9 +41,15 @@ export const inputsCliente = [
 
 export const inputsVendedor = [
   {
-    name: "name",
+    name: "nombre",
     type: "text",
     placeholder: "Tu nombre",
+    required: true,
+  },
+  {
+    name: "apellido",
+    type: "text",
+    placeholder: "Tu apellido",
     required: true,
   },
   {
@@ -47,13 +59,13 @@ export const inputsVendedor = [
     required: true,
   },
   {
-    name: "phone",
+    name: "telefono",
     type: "text",
     placeholder: "teléfono",
     required: true,
   },
   {
-    name: "pdvname",
+    name: "direccion_pdv",
     type: "text",
     placeholder: "Nombre de PVD",
     required: true,
@@ -65,17 +77,11 @@ export const inputsVendedor = [
     required: true,
   },
   {
-    name: "codigo",
+    name: "code",
     type: "text",
     placeholder: "código",
     required: true,
-  },
-  {
-    name: "ciudad",
-    type: "text",
-    placeholder: "Tu ciudad",
-    required: true,
-  },
+  }
 ];
 
 const common = {
