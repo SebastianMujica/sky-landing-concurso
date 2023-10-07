@@ -39,7 +39,7 @@ const ClienteForm = ({
       data.ip = ipAddress;
       if (vendedor !== null){
         if (vendedor){
-          const response = await fetch("http://apiviajacon.skylubricantes.com/api/talonario/register", {
+          const response = await fetch("https://apiviajacon.skylubricantes.com/api/talonario/register", {
             method: "POST",
             body: JSON.stringify(data),
             headers: {
@@ -60,7 +60,7 @@ const ClienteForm = ({
               })
             }
           }else{
-          const response = await fetch("http://apiviajacon.skylubricantes.com/api/cupones/create", {
+          const response = await fetch("https://apiviajacon.skylubricantes.com/api/cupones/create", {
             method: "POST",
             body: JSON.stringify(data),
             headers: {
@@ -73,7 +73,7 @@ const ClienteForm = ({
                 html: <i>El cupon se ha registrado</i>,
                 icon: 'success'
               })
-              
+
             }else{
               MySwal.fire({
                 title: <strong>Error</strong>,
