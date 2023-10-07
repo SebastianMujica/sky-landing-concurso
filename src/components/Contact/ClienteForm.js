@@ -124,7 +124,7 @@ const ClienteForm = ({
                         id = "ciudad" 
                         {...register("ciudad", {pattern: /[a-zA-Z]/i } )}
                         >
-            <option key={ 0 } value=" "></option>
+            <option key={ 0 } value=" ">Elije una Ciudad</option>
             {dataCiudades.map(({ciudades,id_estado}) => (
                   
                   ciudades.map((value)=>(
