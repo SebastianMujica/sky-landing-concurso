@@ -23,13 +23,13 @@ const ContactPage = ({ isTitleTwo = false }) => {
 
         <Row>
           <Col xl={12}>
-            <h2>¿Eres Vendedor?</h2>
+            <h2>Selecciona el tipo de participante( Vendedor o Comprador)</h2>
             <FormCheck
                     reverse
                     type="radio"
                     id="custom-switch-si"
                     name="group1"
-                    label="Si"                   
+                    label="Comprador"                   
                     onChange={ () => {
                       setCliente(true);
                     }}
@@ -40,7 +40,7 @@ const ContactPage = ({ isTitleTwo = false }) => {
                     type="radio"
                     id="custom-switch-no"
                     name="group1"
-                    label="No"                   
+                    label="Vendedor"                   
                     onChange={ () => {
                       setCliente(false);
                     }}
