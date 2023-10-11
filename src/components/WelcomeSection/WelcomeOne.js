@@ -27,9 +27,7 @@ const WelcomeOne = ({ id = "" }) => {
           <div className="welcome-one__top">
             <Row>
               <Col xl={12} lg={12}>
-              
-                <Image src={logopromo.src} alt="" style={{ width: "211px", marginBottom: "100px;"}} />
-               
+                <Image src={logopromo.src} alt="" style={{ width: "211px", marginBottom: "100px"}} />
                 <div className="welcome-one__top-left">
                   <Title
                     tagline={tagline}

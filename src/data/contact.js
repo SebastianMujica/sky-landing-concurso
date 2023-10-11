@@ -22,19 +22,25 @@ export const inputsCliente = [
   {
     name: "telefono",
     type: "text",
-    placeholder: "teléfono",
+    placeholder: "Teléfono",
     required: true,
   },
   {
     name: "cedula",
     type: "text",
-    placeholder: "cédula",
+    placeholder: "Cédula",
     required: true,
   },
   {
     name: "code",
     type: "text",
-    placeholder: "codigo",
+    placeholder: "Código",
+    required: true,
+  },
+  {
+    name: "producto",
+    type: "text",
+    placeholder: "Indica el producto que compraste",
     required: true,
   },
 ];
@@ -55,13 +61,13 @@ export const inputsVendedor = [
   {
     name: "cedula",
     type: "text",
-    placeholder: "cédula",
+    placeholder: "Cédula",
     required: true,
   },
   {
     name: "telefono",
     type: "text",
-    placeholder: "teléfono",
+    placeholder: "Teléfono",
     required: true,
   },
   {
@@ -81,7 +87,13 @@ export const inputsVendedor = [
     type: "text",
     placeholder: "código",
     required: true,
-  }
+  },
+  {
+    name: "producto",
+    type: "text",
+    placeholder: "Indica el producto que vendiste",
+    required: true,
+  },
 ];
 
 const common = {
