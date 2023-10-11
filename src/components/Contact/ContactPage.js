@@ -31,7 +31,7 @@ const ContactPage = ({ isTitleTwo = false }) => {
                     name="group1"
                     label="Comprador"                   
                     onChange={ () => {
-                      setCliente(true);
+                      setCliente(false);
                     }}
                     style={{ marginBottom:"25px", marginTop: "25px"}}
             />
@@ -42,7 +42,7 @@ const ContactPage = ({ isTitleTwo = false }) => {
                     name="group1"
                     label="Vendedor"                   
                     onChange={ () => {
-                      setCliente(false);
+                      setCliente(true);
                     }}
                     style={{ marginBottom:"25px", marginTop: "25px"}}
             />

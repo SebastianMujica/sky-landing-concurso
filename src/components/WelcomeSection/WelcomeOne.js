@@ -41,6 +41,9 @@ const WelcomeOne = ({ id = "" }) => {
             </Row>
           </div>
           <div className="welcome-one__bottom">
+              <div className="welcome-one__top-left">
+                  <h1 className="section-title__title " style={{fontSize: "26px"}}>Sigue los siguientes pasos</h1>
+                </div>
             <ul className="list-unstyled welcome-one__feature">
               {features.map((feature) => (
                 <SingleFeatureOne key={feature.id} feature={feature} />

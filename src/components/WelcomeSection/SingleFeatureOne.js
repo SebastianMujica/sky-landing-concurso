@@ -9,14 +9,14 @@ const SingleFeatureOne = ({ feature = {} }) => {
     <li className="welcome-one__feature-single animated fadeInUp">
       <div className="welcome-one__feature-content">
         <h3 className="welcome-one__feature-title">
-          <Link href={href}>
+          
             <TextSplit text={title} />
-          </Link>
+          
         </h3>
         <div className="welcome-one__feature-arrow">
-          <Link href={href}>
+          
             <span className="icon-right-arrow"></span>
-          </Link>
+          
         </div>
       </div>
       <div className="welcome-one__feature-icon">
