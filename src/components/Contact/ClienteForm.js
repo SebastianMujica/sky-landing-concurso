@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import Form from 'react-bootstrap/Form';
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
+import { ciudades } from "@/data/contact";
 
 const ClienteForm = ({
   inputs = [],
@@ -35,7 +36,11 @@ const ClienteForm = ({
   const MySwal = withReactContent(Swal)
 
   const onSubmit = async (data) => {
-    
+
+      
+
+      
+      if (dataCiudades.find( x => x.ciudades.find( y => y === data.ciudad) )){
       data.ip = ipAddress;
       if (vendedor !== null){
         if (vendedor){
@@ -89,6 +94,13 @@ const ClienteForm = ({
           icon: 'error'
         })
       }
+    }else{
+      MySwal.fire({
+        title: <strong>Error</strong>,
+        html: <i>Debes seleccionar una ciudad valida</i>,
+        icon: 'error'
+      })
+    }
   }
 
   return (
@@ -134,6 +146,11 @@ const ClienteForm = ({
 
                   ))}
           </datalist>
+          { errors["ciudad"] && (
+                <label htmlFor={"ciudad"} className="error">
+                  Este campo es obligatorio
+                </label>
+              )}
         </Col>
       </Row>
       <Row>
