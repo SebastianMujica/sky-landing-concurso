@@ -52,7 +52,6 @@ const WelcomeOne = ({ id = "" }) => {
           </div>
         </Container>
       </section>
-      <VideoModal isOpen={isOpen} setOpen={setOpen} videoId={videoId} />
     </>
   );
 };

@@ -2375,7 +2375,7 @@ input[name="ciudad"] {
   flex: 0 0 33.333333%;
   max-width: 33.333333%;
   width: 100%;
-  background-color: var(--oslim-white);
+  
   padding: 37px 60px 32px;
 }
 
@@ -2386,7 +2386,6 @@ input[name="ciudad"] {
   left: 0;
   content: "";
   width: 1px;
-  background-color: #dcdce0;
 }
 
 .welcome-one__feature-single:first-child:before {

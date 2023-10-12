@@ -6,10 +6,10 @@ const SingleFeatureOne = ({ feature = {} }) => {
   const { title, href, icon } = feature;
 
   return (
-    <li className="welcome-one__feature-single animated fadeInUp">
+    <li className="welcome-one__feature-single animated fadeInUp" >
       <div className="welcome-one__feature-content">
-        <h3 className="welcome-one__feature-title">
-          
+        <h3 className="welcome-one__feature-title" style={{color:"white"}}>
+
             <TextSplit text={title} />
           
         </h3>
@@ -22,7 +22,6 @@ const SingleFeatureOne = ({ feature = {} }) => {
       <div className="welcome-one__feature-icon">
         <span className={icon}></span>
       </div>
-      <div className="welcome-one__feature-count"></div>
     </li>
   );
 };
