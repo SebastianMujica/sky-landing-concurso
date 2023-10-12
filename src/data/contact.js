@@ -40,7 +40,7 @@ export const inputsCliente = [
   {
     name: "producto",
     type: "text",
-    placeholder: "Indica el producto que compraste",
+    placeholder: "Indica el producto que compraste: Ejemplo (Mineral 20-50)",
     required: true,
   },
 ];
@@ -91,7 +91,7 @@ export const inputsVendedor = [
   {
     name: "producto",
     type: "text",
-    placeholder: "Indica el producto que vendiste",
+    placeholder: "Indica el producto que vendiste: Ejemplo (Mineral 20-50)",
     required: true,
   },
 ];

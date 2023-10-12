@@ -116,32 +116,24 @@ const ClienteForm = ({
           </Col>
         ))}
       </Row>
+
       <Row>
-      <Col  xl={6}>
-        <div className={inputClassName}>
-          <Form.Select 
+        <Col xl={12}>
+          <input type="text" list="data"  className={inputClassName}  
                         name = "ciudad" 
                         id = "ciudad" 
-                        {...register("ciudad", {pattern: /[a-zA-Z]/i } )}
-                        >
-            <option key={ 0 } value=" ">Elije una Ciudad</option>
-            {dataCiudades.map(({ciudades,id_estado}) => (
+                        placeholder="Escribe y selecciona una ciudad"
+                        {...register("ciudad",true)}
+                        />
+          <datalist id="data">
+          {dataCiudades.map(({ciudades,id_estado}) => (
                   
                   ciudades.map((value)=>(
                     <option key={ id_estado+value } value={value}> {value} </option>
                   ))          
 
                   ))}
-          </Form.Select>
-            { errors["ciudad"] && (
-                <label htmlFor={"ciudad"} className="error">
-                  Elije una Ciudad
-                </label>
-            )}{
-              console.log(errors)
-
-            }
-          </div>
+          </datalist>
         </Col>
       </Row>
       <Row>
