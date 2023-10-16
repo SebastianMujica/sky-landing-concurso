@@ -7,6 +7,7 @@ import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
 import { ciudades } from "@/data/contact";
 
+
 const ClienteForm = ({
   inputs = [],
   dataCiudades = [],
@@ -21,6 +22,8 @@ const ClienteForm = ({
   const {
     register,
     handleSubmit,
+    reset,
+    resetField,
     formState: { errors },
   } = useForm();
   
@@ -32,8 +35,10 @@ const ClienteForm = ({
         .then(data => setIPAddress(data.ip))
         .catch(error => console.log(error))
     }, []);
-  
-  const MySwal = withReactContent(Swal)
+    
+    const [estadoState, setEstadoState] = useState(null)
+    
+     const MySwal = withReactContent(Swal)
 
   const onSubmit = async (data) => {
 
@@ -78,7 +83,7 @@ const ClienteForm = ({
                 html: <i>El cupon se ha registrado</i>,
                 icon: 'success'
               })
-
+              reset()
             }else{
               MySwal.fire({
                 title: <strong>Error</strong>,
@@ -109,8 +114,8 @@ const ClienteForm = ({
       className={`${formClassName} contact-form-validated`}
     >
       <Row>
-        {inputs.map(({ name, placeholder, type, required }) => (
-          <Col key={name} xl={6}>
+        {inputs.map(({ name, placeholder, type, required, xl }) => (
+          <Col key={name} xl={ xl}>
             <div className={inputClassName}>
               <input
                 type={type}
@@ -131,20 +136,54 @@ const ClienteForm = ({
 
       <Row>
         <Col xl={12}>
-          <input type="text" list="data"  className={inputClassName}  
+          <input type="text" list="data-estado"  className={inputClassName}  
+                        name = "estado" 
+                        id = "estado" 
+                        placeholder="Escribe y selecciona un estado"
+                        {...register("estado",true)}
+                        onChange={  (value)=>{
+                                              setEstadoState(value.target.value)
+                                              resetField("ciudad")  
+                                            } }
+                        />
+          <datalist id="data-estado">
+          {dataCiudades.map(({estado}) => (
+                  
+                    <option key={ estado } value={estado} > {estado} </option>
+
+                  ))}
+          </datalist>
+          { errors["estado"] && (
+                <label htmlFor={"estado"} className="error">
+                  Este campo es obligatorio
+                </label>
+              )}
+        </Col>
+      </Row>
+      <Row>
+        <Col xl={12}>
+          <input type="text" list="data-ciudad"  className={inputClassName}  
                         name = "ciudad" 
                         id = "ciudad" 
                         placeholder="Escribe y selecciona una ciudad"
                         {...register("ciudad",true)}
                         />
-          <datalist id="data">
-          {dataCiudades.map(({ciudades,id_estado}) => (
-                  
+          <datalist id="data-ciudad">
+             {
+              dataCiudades.filter(({estado})=>(estadoState === estado )).map((value)=>(
+                value.ciudades.map((ciudades) =>(         
+                     <option key={ estado + ciudades } value={ ciudades }> {ciudades} </option>
+                  ))))             
+            } 
+
+{/*           {dataCiudades.map(({estado, ciudades, id_estado}) => (
+
                   ciudades.map((value)=>(
                     <option key={ id_estado+value } value={value}> {value} </option>
                   ))          
 
                   ))}
+                  */}          
           </datalist>
           { errors["ciudad"] && (
                 <label htmlFor={"ciudad"} className="error">

@@ -6,42 +6,49 @@ export const inputsCliente = [
     type: "text",
     placeholder: "Tu nombre",
     required: true,
+    xl: 6
   },
   {
     name: "apellido",
     type: "text",
     placeholder: "Tu apellido",
     required: true,
+    xl: 6
   },
   {
     name: "email",
     type: "email",
     placeholder: "Email",
     required: true,
+    xl: 6
   },
   {
     name: "telefono",
     type: "text",
     placeholder: "Teléfono",
     required: true,
+    xl: 6
   },
   {
     name: "cedula",
     type: "text",
     placeholder: "Cédula",
     required: true,
+    xl: 6
   },
   {
     name: "code",
     type: "text",
     placeholder: "Código",
     required: true,
+    xl: 6
   },
   {
     name: "producto",
     type: "text",
     placeholder: "Indica el producto que compraste: Ejemplo (Mineral 20-50)",
     required: true,
+    xl: 12
   },
 ];
 
@@ -51,48 +58,56 @@ export const inputsVendedor = [
     type: "text",
     placeholder: "Tu nombre",
     required: true,
+    xl: 6
   },
   {
     name: "apellido",
     type: "text",
     placeholder: "Tu apellido",
     required: true,
+    xl: 6
   },
   {
     name: "cedula",
     type: "text",
     placeholder: "Cédula",
     required: true,
+    xl: 6
   },
   {
     name: "telefono",
     type: "text",
     placeholder: "Teléfono",
     required: true,
+    xl: 6
   },
   {
     name: "direccion_pdv",
     type: "text",
     placeholder: "Nombre de PVD",
     required: true,
+    xl: 6
   },
   {
     name: "email",
     type: "email",
     placeholder: "Email",
     required: true,
+    xl: 6
   },
   {
     name: "code",
     type: "text",
     placeholder: "código",
     required: true,
+    xl: 6
   },
   {
     name: "producto",
     type: "text",
     placeholder: "Indica el producto que vendiste: Ejemplo (Mineral 20-50)",
     required: true,
+    xl: 12
   },
 ];
 

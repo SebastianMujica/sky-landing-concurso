@@ -138,6 +138,20 @@ input[name="ciudad"] {
   font-weight: 500;
   display: block;
 }
+input[name="estado"] {
+  height: 70px;
+  width: 100%;
+  border: none;
+  background-color: var(--oslim-extra);
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: var(--oslim-bdr-radius);
+  outline: none;
+  font-size: 16px;
+  color: var(--oslim-gray);
+  font-weight: 500;
+  display: block;
+}
 .page-wrapper {
   position: relative;
   margin: 0 auto;
