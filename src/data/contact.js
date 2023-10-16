@@ -39,7 +39,7 @@ export const inputsCliente = [
   {
     name: "code",
     type: "text",
-    placeholder: "Código",
+    placeholder: "Número de Ticket",
     required: true,
     xl: 6
   },
