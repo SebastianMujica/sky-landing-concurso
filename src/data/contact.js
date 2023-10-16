@@ -84,7 +84,7 @@ export const inputsVendedor = [
   {
     name: "direccion_pdv",
     type: "text",
-    placeholder: "Nombre de PVD",
+    placeholder: "Nombre del Establecimiento",
     required: true,
     xl: 6
   },
@@ -98,7 +98,7 @@ export const inputsVendedor = [
   {
     name: "code",
     type: "text",
-    placeholder: "código",
+    placeholder: "Número de Ticket",
     required: true,
     xl: 6
   },
