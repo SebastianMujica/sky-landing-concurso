@@ -45,7 +45,7 @@ const ClienteForm = ({
       
 
       
-      if (dataCiudades.find( x => x.ciudades.find( y => y === data.ciudad) )){
+      if (dataCiudades.find( x => x.ciudades.find( y => y === data.ciudad.trim()) )){
       data.ip = ipAddress;
       if (vendedor !== null){
         if (vendedor){
