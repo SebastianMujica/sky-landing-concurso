@@ -65,7 +65,7 @@ const ClienteForm = ({
             }else{
               MySwal.fire({
                 title: <strong>Error</strong>,
-                html: <i>Hubo un Error al registrar el cupon</i>,
+                html: <i>Ese cupon ya esta registrado</i>,
                 icon: 'error'
               })
             }
