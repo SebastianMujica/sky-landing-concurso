@@ -45,7 +45,7 @@ const ClienteForm = ({
       
 
       
-      if (dataCiudades.find( x => x.ciudades.find( y => y === data.ciudad.trim()) )){
+  //  if (dataCiudades.find( x => x.ciudades.find( y => y === data.ciudad.trim()) )){
       data.ip = ipAddress;
       if (vendedor !== null){
         if (vendedor){
@@ -99,13 +99,13 @@ const ClienteForm = ({
           icon: 'error'
         })
       }
-    }else{
+    /*}else{
       MySwal.fire({
         title: <strong>Error</strong>,
         html: <i>Debes seleccionar una ciudad valida</i>,
         icon: 'error'
       })
-    }
+    }*/
   }
 
   return (
