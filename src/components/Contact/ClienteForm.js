@@ -37,8 +37,7 @@ const ClienteForm = ({
     }, []);
     
     const [estadoState, setEstadoState] = useState(null)
-    
-     const MySwal = withReactContent(Swal)
+    const MySwal = withReactContent(Swal)
 
   const onSubmit = async (data) => {
 
@@ -49,7 +48,42 @@ const ClienteForm = ({
       data.ip = ipAddress;
       if (vendedor !== null){
         if (vendedor){
-          const response = await fetch("https://apiviajacon.skylubricantes.com/api/talonario/register", {
+          const codigos = data.code.split(',')
+          const response = null
+          if (codigos.length  > 1)
+            { 
+              console.log('insertando varios codigos')
+              const consulta_array = []
+              codigos.forEach( codigo => {
+                const consulta = ''
+                const data_strip = data
+                data_strip.code = codigo 
+                const response = fetch("https://apiviajacon.skylubricantes.com/api/talonario/register", {
+                                method: "POST",
+                                body: JSON.stringify(data_strip),
+                                headers: {
+                                    "Content-Type": "application/json",
+                                  },
+                                });
+          
+                if (response.status == 201){
+                  consulta_array.push('Exito al insertar el ticket '+ codigo)
+                  //console.log('Exito al insertar el ticket '+ codigo )
+
+                }else{
+                  consulta_array.push('Error al insertar el ticket '+ codigo)
+                  //console.log('Error al insertar el ticket '+ codigo )
+                }
+              });
+
+              console.log(consulta_array)
+              MySwal.fire({
+                title: <strong>Registro Multiple</strong>,
+                html: <i>Resultado { consulta_array.map( elemento => <h3> {elemento} </h3> ) }</i>,
+                icon: 'success'
+              })
+            }else{
+              const response = await fetch("https://apiviajacon.skylubricantes.com/api/talonario/register", {
             method: "POST",
             body: JSON.stringify(data),
             headers: {
@@ -69,8 +103,66 @@ const ClienteForm = ({
                 icon: 'error'
               })
             }
+            }
+          /*
+          const response = await fetch("https://apiviajacon.skylubricantes.com/api/talonario/register", {
+            method: "POST",
+            body: JSON.stringify(data),
+            headers: {
+                "Content-Type": "application/json",
+              },
+            });
+            if (response.status ==201){
+              MySwal.fire({
+                title: <strong>Exito</strong>,
+                html: <i>El cupon se ha registrado</i>,
+                icon: 'success'
+              })
+            }else{
+              MySwal.fire({
+                title: <strong>Error</strong>,
+                html: <i>Ese cupon ya esta registrado</i>,
+                icon: 'error'
+              })
+            }*/
           }else{
-          const response = await fetch("https://apiviajacon.skylubricantes.com/api/cupones/create", {
+
+            const codigos = data.code.split(',')
+            const response = null
+            if (codigos.length  > 1)
+              { 
+                console.log('insertando varios codigos')
+                const consulta_array = []
+                codigos.forEach( codigo => {
+                  const consulta = ''
+                  const data_strip = data
+                  data_strip.code = codigo 
+                  const response = fetch("https://apiviajacon.skylubricantes.com/api/cupones/create", {
+                                  method: "POST",
+                                  body: JSON.stringify(data_strip),
+                                  headers: {
+                                      "Content-Type": "application/json",
+                                    },
+                                  });
+                  console.log(response)
+                  if (response.status == 201){
+                    consulta_array.push('Exito al insertar el ticket '+ codigo)
+                    //console.log('Exito al insertar el ticket '+ codigo )
+  
+                  }else{
+                    consulta_array.push('Error al insertar el ticket '+ codigo)
+                    //console.log('Error al insertar el ticket '+ codigo )
+                  }
+                });
+  
+                console.log(consulta_array)
+                MySwal.fire({
+                  title: <strong>Registro Multiple</strong>,
+                  html: <i>Resultado { consulta_array.map( elemento => <h3> {elemento} </h3> ) }</i>,
+                  icon: 'success'
+                })
+          }else{
+            const response = await fetch("https://apiviajacon.skylubricantes.com/api/cupones/create", {
             method: "POST",
             body: JSON.stringify(data),
             headers: {
@@ -91,8 +183,8 @@ const ClienteForm = ({
                 icon: 'error'
               })
             }
-        }
-      }else{
+        }}
+      }else {
         MySwal.fire({
           title: <strong>Error</strong>,
           html: <i>Debes decir si eres Vendedor o Cliente</i>,
