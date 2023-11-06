@@ -54,11 +54,11 @@ const ClienteForm = ({
             { 
               console.log('insertando varios codigos')
               const consulta_array = []
-              codigos.forEach( codigo => {
+              for (const codigo of codigos){
                 const consulta = ''
                 const data_strip = data
                 data_strip.code = codigo 
-                const response = fetch("https://apiviajacon.skylubricantes.com/api/talonario/register", {
+                const response =await fetch("https://apiviajacon.skylubricantes.com/api/talonario/register", {
                                 method: "POST",
                                 body: JSON.stringify(data_strip),
                                 headers: {
@@ -74,7 +74,7 @@ const ClienteForm = ({
                   consulta_array.push('Error al insertar el ticket '+ codigo)
                   //console.log('Error!!  al insertar el ticket '+ codigo )
                 }
-              });
+              };
 
               console.log(consulta_array)
               MySwal.fire({
