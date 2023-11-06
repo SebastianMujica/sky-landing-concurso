@@ -39,9 +39,9 @@ export const inputsCliente = [
   {
     name: "code",
     type: "text",
-    placeholder: "Número de Ticket",
+    placeholder: "Números de Ticket ( puedes colocar varios separados por comas 1111,2222,3333 )",
     required: true,
-    xl: 6
+    xl: 12
   },
   {
     name: "producto",
@@ -98,9 +98,9 @@ export const inputsVendedor = [
   {
     name: "code",
     type: "text",
-    placeholder: "Número de Ticket",
+    placeholder: "Números de Ticket ( puedes colocar varios separados por comas 1111,2222,3333 )",
     required: true,
-    xl: 6
+    xl: 12
   },
   {
     name: "producto",
