@@ -79,7 +79,7 @@ const ClienteForm = ({
               console.log(consulta_array)
               MySwal.fire({
                 title: <strong>Registro Multiple</strong>,
-                html: <i>Resultado { consulta_array.map( elemento => <h3> {elemento} </h3> ) }</i>,
+                html: <i>Resultado { consulta_array.map( elemento => <h3 key={elemento}> {elemento} </h3> ) }</i>,
                 icon: 'success'
               })
             }else{
@@ -158,7 +158,7 @@ const ClienteForm = ({
 
                 MySwal.fire({
                   title: <strong>Registro Multiple</strong>,
-                  html: <i>Resultado { consulta_array.map( elemento => <h3> {elemento} </h3> ) }</i>,
+                  html: <i>Resultado { consulta_array.map( elemento => <h3 key={elemento}> {elemento} </h3> ) }</i>,
                   icon: 'success'
                 })
                 
