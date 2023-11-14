@@ -215,7 +215,7 @@ const ClienteForm = ({
                 placeholder={placeholder}
                 name={name}
                 id={name}
-                {...register(name, { required })}
+                {...register(name, { required  })}
               />
               {required && errors[name] && (
                 <label htmlFor={name} className="error">
@@ -229,23 +229,23 @@ const ClienteForm = ({
 
       <Row>
         <Col xl={12}>
-          <input type="text" list="data-estado"  className={inputClassName}  
+          <select className={inputClassName}  
                         name = "estado" 
                         id = "estado" 
                         placeholder="Escribe y selecciona un estado"
-                        {...register("estado",true)}
+                        {...register("estado",{required:'Debe elegir un estado'})}
                         onChange={  (value)=>{
                                               setEstadoState(value.target.value)
                                               resetField("ciudad")  
                                             } }
-                        />
-          <datalist id="data-estado">
+                        >
+          <option value="" disabled selected>Selecciona un Estado</option>
           {dataCiudades.map(({estado}) => (
                   
                     <option key={ estado } value={estado} > {estado} </option>
 
                   ))}
-          </datalist>
+         </select>
           { errors["estado"] && (
                 <label htmlFor={"estado"} className="error">
                   Este campo es obligatorio
@@ -255,19 +255,19 @@ const ClienteForm = ({
       </Row>
       <Row>
         <Col xl={12}>
-          <input type="text" list="data-ciudad"  className={inputClassName}  
+          <select className={inputClassName}  
                         name = "ciudad" 
                         id = "ciudad" 
                         placeholder="Escribe y selecciona una ciudad"
-                        {...register("ciudad",true)}
-                        />
-          <datalist id="data-ciudad">
-             {
+                        {...register("ciudad",{required:'Debe elegir una ciudad'})}
+                        >
+              <option value="" disabled selected>Selecciona una Ciudad</option>             {
               dataCiudades.filter(({estado})=>(estadoState === estado )).map((value)=>(
                 value.ciudades.map((ciudades) =>(         
                      <option key={ estado + ciudades } value={ ciudades }> {ciudades} </option>
                   ))))             
             } 
+            
 
 {/*           {dataCiudades.map(({estado, ciudades, id_estado}) => (
 
@@ -277,7 +277,7 @@ const ClienteForm = ({
 
                   ))}
                   */}          
-          </datalist>
+          </select>
           { errors["ciudad"] && (
                 <label htmlFor={"ciudad"} className="error">
                   Este campo es obligatorio
