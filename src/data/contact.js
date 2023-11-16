@@ -5,49 +5,55 @@ export const inputsCliente = [
     name: "nombre",
     type: "text",
     placeholder: "Tu nombre",
-    required: true,
+    required: { required: 'El nombre es obligatorio' },
     xl: 6
   },
   {
     name: "apellido",
     type: "text",
     placeholder: "Tu apellido",
-    required: true,
+    required: { required: 'El apellido es obligatorio' },
     xl: 6
   },
   {
     name: "email",
     type: "email",
     placeholder: "Email",
-    required: true,
+    required: { required: 'El correo es obligatorio' },
     xl: 6
   },
   {
     name: "telefono",
     type: "text",
     placeholder: "Teléfono",
-    required: true,
+    required: { required: 'El telefono es obligatorio' },
     xl: 6
   },
   {
     name: "cedula",
     type: "text",
     placeholder: "Cédula",
-    required: true,
+    required: { required: 'La cedula es obligatoria' },
     xl: 6
   },
   {
     name: "code",
     type: "text",
     placeholder: "Números de Ticket ( puedes colocar varios separados por comas 1111,2222,3333 )",
-    required: true,
+    required: { 
+        required: 'El numero de ticket es obligatorio',
+        pattern: {
+                    value: /(^[0-9]+$)|(^[0-9,]+$)/,
+                    message: 'Introduzca un código valido, debe ser en este formato 11111 o 1111,22222,33333, sin espacios',
+                }
+            },
     xl: 12
   },
   {
     name: "producto",
     type: "text",
     placeholder: "Indica el producto que compraste: Ejemplo (Mineral 20-50)",
-    required: true,
+    required: { required: 'El producto es obligatorio' },
     xl: 12
   },
 ];
@@ -57,56 +63,62 @@ export const inputsVendedor = [
     name: "nombre",
     type: "text",
     placeholder: "Tu nombre",
-    required: true,
+    required: { required: 'El nombre es obligatorio' },
     xl: 6
   },
   {
     name: "apellido",
     type: "text",
     placeholder: "Tu apellido",
-    required: true,
+    required: { required: 'El apellido es obligatorio' },
     xl: 6
   },
   {
     name: "cedula",
     type: "text",
     placeholder: "Cédula",
-    required: true,
+    required: { required: 'La cedula es obligatoria' },
     xl: 6
   },
   {
     name: "telefono",
     type: "text",
     placeholder: "Teléfono",
-    required: true,
+    required: { required: 'El teléfono es obligatorio' },
     xl: 6
   },
   {
     name: "direccion_pdv",
     type: "text",
     placeholder: "Nombre del Establecimiento",
-    required: true,
+    required: { required: 'El nombre del establecimiento es obligatorio' },
     xl: 6
   },
   {
     name: "email",
     type: "email",
     placeholder: "Email",
-    required: true,
+    required: { required: 'El correo es obligatorio' },
     xl: 6
   },
   {
     name: "code",
     type: "text",
     placeholder: "Números de Ticket ( puedes colocar varios separados por comas 1111,2222,3333 )",
-    required: true,
+    required: { 
+        required: 'El numero de ticket es obligatorio',
+        pattern: {
+                    value: /(^[0-9]+$)|(^[0-9,]+$)/,
+                    message: 'Introduzca un código valido, debe ser en este formato 11111 o 1111,22222,33333, sin espacios',
+                }
+            },
     xl: 12
   },
   {
     name: "producto",
     type: "text",
     placeholder: "Indica el producto que vendiste: Ejemplo (Mineral 20-50)",
-    required: true,
+    required: { required:  'El producto es obligatorio' },
     xl: 12
   },
 ];

@@ -215,11 +215,11 @@ const ClienteForm = ({
                 placeholder={placeholder}
                 name={name}
                 id={name}
-                {...register(name, { required  })}
+                {...register(name,  required )}
               />
               {required && errors[name] && (
                 <label htmlFor={name} className="error">
-                  Este campo es obligatorio
+                  {errors[name].message}
                 </label>
               )}
             </div>
